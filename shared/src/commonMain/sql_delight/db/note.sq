@@ -1,8 +1,8 @@
 CREATE TABLE noteEntity(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    label TEXT NOT NULL,
+    title TEXT NOT NULL,
     content TEXT NOT NULL,
-    status TEXT NOT NULL,
+    type TEXT NOT NULL,
     hexColor INTEGER NOT NULL,
     createdAt INTEGER NOT NULL
 );
@@ -20,9 +20,9 @@ insertNote:
 INSERT OR REPLACE
 INTO noteEntity(
     id,
-    label,
+    title,
     content,
-    status,
+    type,
     hexColor,
     createdAt
 ) VALUES(?, ?, ?, ?, ?, ?);
